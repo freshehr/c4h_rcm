@@ -86,7 +86,7 @@ An Element is the leaf-node construct which is basicaaly a name/value pair with 
 
 ## Code4Health Ehrscape domains and EhrExplorer
 
-   The [Code4Health Ehrscape](https://dev.ehrscape.com/) openEHR service provided by [Marand](http:/marand.si) is configured to allow app developers to setup and work their own individual 'domain', populated with its own dummy patient data and openEHR content models and allows both read and write access to the data and for the upload of new openEHR content models.
+   The [Code4Health Ehrscape](https://ehrscape.code-4-health.org/) openEHR service provided by [Marand](http:/marand.si) is configured to allow app developers to setup and work their own individual 'domain', populated with its own dummy patient data and openEHR content models and allows both read and write access to the data and for the upload of new openEHR content models.
 
    Each Ehrscape domain has its own login and password and in the near future may also be accessed via an Ouath2 session from  trusted provider.
 
@@ -107,7 +107,7 @@ You can request an Ehrscape Domain via the Code4Health website. You will need to
 
 	baseURL
 
- The baseURL for all Code4Health Ehrscape API calls is https://rest.ehrscape.com
+ The baseURL for all Code4Health Ehrscape API calls is https://ehrscape.code-4-health.org/rest/v1
 
  ### Domain provisioning
 
@@ -122,7 +122,7 @@ You can request an Ehrscape Domain via the Code4Health website. You will need to
 *  Nursing Vital signs encounter
 * Transfer of Care summary Report
 *  Patient End of Life preferences
- 5. A `workspace.md`text file describing the various identifiers for the login / password, exemplar patients, content models and dummy data.
+ 5. A `workspace.md` text file describing the various identifiers for the login / password, exemplar patients, content models and dummy data.
  6. `Postman` collection and environment files
 
  We suggest that you fork this Git repository to your own account so that you can make changes to the content, code and documentation as you add your own examples.
@@ -130,7 +130,7 @@ You can request an Ehrscape Domain via the Code4Health website. You will need to
 ### EhrExplorer
 
 The Marand EhrExplorer tool can be used to create openEHR queries and to visualise the openEHR content models being used by your domain
-   1. Browse to [EHRExplorer](https://dev.ehrscape.com/explorer/)
+   1. Browse to [EHRExplorer](https://ehrscape.code-4-health.org/explorer/)
    2. Enter the name and password for your C4H Ehrscape domain as above
    3. Leave the domain field as `'ehrscape``
 
@@ -142,7 +142,7 @@ e.g. If you navigate to **'$$$'** and right-click you can examine the internal *
 #### Ehrscape API browser
 
 The C4H API Browser can be used to
-   1. Browse to [EHRScape API Explorer](https://dev.ehrscape.com/api-explorer.html)
+   1. Browse to [EHRScape API Explorer](https://ehrscape.code-4-health.org/api-explorer.html)
    2. Press the ![Settings button](./img/tool_button.png) tool setting button and set userName to `c4h_train` and password to `c4h_train99`
    3. Any test calls in the API browser will now work against the Code4health Dental App challenge domain.
 
