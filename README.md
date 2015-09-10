@@ -6,7 +6,9 @@ This scenario represents the key clinical information typically recorded and upd
 
 [Detailed description of scenario](/docs/scenarios/RemoteChemotherapyMonitoring.docx)
 
-[Draft Example UI](/docs/scenarios/Chemo%20monitor%20-%20multiversions.pdf)
+[Draft Example UI](/docs/scenarios/Chemo_monitor_UI_multiversions.pdf)
+
+[Workflow diagram](/docs/scenarios/RemoteChemotherapyMonitoring.pdf)
 
 ### What has been pre-prepared
 
