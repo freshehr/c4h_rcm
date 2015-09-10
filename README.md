@@ -4,7 +4,7 @@
 
 This scenario represents the key clinical information typically recorded and updated as part of routine monitoring of patients who are on chemotherapy.
 
-[Detailed description of scenario](/docs/scenarios/RemoteChemotherapyMonitoring.docx)
+[Detailed description of scenario](/docs/scenarios/RemoteChemotherapyMonitoringScenario.pdf)
 
 [Draft Example UI](/docs/scenarios/Chemo_monitor_UI_multiversions.pdf)
 
