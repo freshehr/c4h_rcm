@@ -1,0 +1,234 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.mascc_risk_score.v0
+
+concept
+	[at0000]	-- MASCC risk score
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Ian McNicoll">
+		["email"] = <"ian@freshehr.com">
+		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+		["date"] = <"2015-09-09">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"NotSet">
+	other_contributors = <>
+	other_details = <
+		["references"] = <"Klastersky J and Paesmans M. The Multinational Association for Supportive Care in Cancer (MASCC) risk index score: 10 years of use for identifying low-risk febrile neutropenic cancer patients. Support Care Cancer 2013;May;21(5):1487-95.
+
+Identifying Patients at Low Risk for FN Complications: Development and Validation of the MASCC Risk Index Score,http://www.mascc.org/mascc-fn-risk-index-score">
+		["MD5-CAM-1.0.1"] = <"757354EC699E0A5E1AB2F82CDA163B76">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- MASCC risk score
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					POINT_EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {	-- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Burden of illness - subjective symptoms
+										value matches {
+											0|[local::at0007], 	-- Severe or moribund
+											3|[local::at0006], 	-- Moderate
+											5|[local::at0005]  	-- None or mild
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {	-- Blood pressure
+										value matches {
+											0|[local::at0025], 	-- Systolic blood pressure less than 90 mmHg
+											5|[local::at0024]  	-- Systolic blood pressure >= 90 mmHg
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {	-- Active COPD
+										value matches {
+											0|[local::at0026], 	-- Has Active COPD
+											4|[local::at0027]  	-- Does not have active COPD
+										}
+									}
+									ELEMENT[at0010] occurrences matches {0..1} matches {	-- Solid tumour
+										value matches {
+											0|[local::at0028], 	-- Has solid tumour
+											5|[local::at0029]  	-- No solid tumour
+										}
+									}
+									ELEMENT[at0011] occurrences matches {0..1} matches {	-- Fungal infection
+										value matches {
+											0|[local::at0013], 	-- Yes
+											4|[local::at0012]  	-- No
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {	-- Dehydration
+										value matches {
+											0|[local::at0016], 	-- Yes
+											3|[local::at0015]  	-- No
+										}
+									}
+									ELEMENT[at0017] occurrences matches {0..1} matches {	-- Clinical setting
+										value matches {
+											0|[local::at0019], 	-- Inpatient
+											3|[local::at0018]  	-- Outpatient
+										}
+									}
+									ELEMENT[at0020] occurrences matches {0..1} matches {	-- Age less than 60
+										value matches {
+											0|[local::at0021], 	-- Yes
+											1|[local::at0022]  	-- No
+										}
+									}
+									ELEMENT[at0023] occurrences matches {0..1} matches {	-- MASCC risk score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..26|}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"MASCC risk score">
+					description = <"The Multinational Association for Supportive Care in Cancer (MASCC) Risk Index can be used to identify low-risk patients (score ≥ 21 points) for serious complications of febrile neutropenia.">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Burden of illness - subjective symptoms">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"None or mild">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"Moderate">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"Severe or moribund">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"Blood pressure">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"Active COPD">
+					description = <"*">
+					comment = <"Active COPD defined as active chronic bronchitis, emphysema, decrease in forced expiratory volumes, and need for oxygen therapy, corticosteroids, and/or bronchodilators.">
+				>
+				["at0010"] = <
+					text = <"Solid tumour">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"Fungal infection">
+					description = <"Previous Fungal infection in Patient with a Hematologic Malignancy">
+				>
+				["at0012"] = <
+					text = <"No">
+					description = <"*">
+				>
+				["at0013"] = <
+					text = <"Yes">
+					description = <"*">
+				>
+				["at0014"] = <
+					text = <"Dehydration">
+					description = <"Dehydration Requiring IV Fluids.">
+				>
+				["at0015"] = <
+					text = <"No">
+					description = <"*">
+				>
+				["at0016"] = <
+					text = <"Yes">
+					description = <"*">
+				>
+				["at0017"] = <
+					text = <"Clinical setting">
+					description = <"Clinical Setting at Onset of Fever.">
+				>
+				["at0018"] = <
+					text = <"Outpatient">
+					description = <"*">
+				>
+				["at0019"] = <
+					text = <"Inpatient">
+					description = <"*">
+				>
+				["at0020"] = <
+					text = <"Age less than 60">
+					description = <"*">
+				>
+				["at0021"] = <
+					text = <"Yes">
+					description = <"*">
+				>
+				["at0022"] = <
+					text = <"No">
+					description = <"*">
+				>
+				["at0023"] = <
+					text = <"MASCC risk score">
+					description = <"The MASCC Risk score. The higher the score, the lower the risk.">
+				>
+				["at0024"] = <
+					text = <"Systolic blood pressure >= 90 mmHg">
+					description = <"*">
+				>
+				["at0025"] = <
+					text = <"Systolic blood pressure less than 90 mmHg">
+					description = <"*">
+				>
+				["at0026"] = <
+					text = <"Has Active COPD">
+					description = <"*">
+				>
+				["at0027"] = <
+					text = <"Does not have active COPD">
+					description = <"*">
+				>
+				["at0028"] = <
+					text = <"Has solid tumour">
+					description = <"*">
+				>
+				["at0029"] = <
+					text = <"No solid tumour">
+					description = <"*">
+				>
+			>
+		>
+	>

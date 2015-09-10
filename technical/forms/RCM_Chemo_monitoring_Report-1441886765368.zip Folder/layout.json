@@ -1,0 +1,51 @@
+[
+    {
+        "col": 1,
+        "row": 1,
+        "width": 12,
+        "height": 35,
+        "children": [
+            {
+                "id": "patient_remote_chemo_monitoring",
+                "rows": [
+                    {
+                        "cols": [
+                            {
+                                "width": "100%",
+                                "children": [
+                                    {
+                                        "id": "patient_remote_chemo_monitoring/indirect_oximetry/any_event/spo2"
+                                    },
+                                    {
+                                        "id": "patient_remote_chemo_monitoring/pulse_heart_beat/any_event/heart_rate"
+                                    },
+                                    {
+                                        "id": "patient_remote_chemo_monitoring/respirations/any_event/rate"
+                                    },
+                                    {
+                                        "id": "patient_remote_chemo_monitoring/body_temperature/any_event/temperature"
+                                    },
+                                    {
+                                        "id": "patient_remote_chemo_monitoring/blood_pressure/any_event/systolic"
+                                    },
+                                    {
+                                        "id": "patient_remote_chemo_monitoring/blood_pressure/any_event/diastolic"
+                                    },
+                                    {
+                                        "id": "patient_remote_chemo_monitoring/mascc_risk_score/mascc_risk_score"
+                                    },
+                                    {
+                                        "id": "patient_remote_chemo_monitoring/symptoms/symptom/symptom_name"
+                                    },
+                                    {
+                                        "id": "patient_remote_chemo_monitoring/symptoms/comments"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

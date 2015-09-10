@@ -1,0 +1,2 @@
+This is the template file set for template Laboratory panel report (LOINC) example( e32b7e36-6faa-42f2-a3e2-fc6b8ba9a797, revision 2), exported from the Clinical Knowledge Manager.
+Export time: Tue Sep 08 18:04:48 CEST 2015

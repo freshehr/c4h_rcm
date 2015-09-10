@@ -1,0 +1,20 @@
+{
+    "ctx/language": "en",
+    "ctx/territory": "GB",
+    "ctx/composer_name": "Hazel Smith",
+    "ctx/time": "2015-09-08T19:52:07.706+02:00",
+    "ctx/id_namespace": "NHSE",
+    "ctx/id_scheme": "NHSE",
+    "request_for_advice/referral_request:0/request/service_requested": "Request for advice",
+    "request_for_advice/referral_request:0/request/description_of_service": "Oncology service",
+    "request_for_advice/referral_request:0/request/reason_for_request": "Temp rising and feeling unwell - do I need to come in?",
+    "request_for_advice/referral_request:0/request/timing": "R3/2015-09-10T13:00:00Z/P2M",
+    "request_for_advice/referral_request:0/narrative": "Request for advice",
+    "request_for_advice/referral_tracking/ism_transition/current_state|code": "526",
+    "request_for_advice/referral_tracking/ism_transition/current_state|value": "planned",
+    "request_for_advice/referral_tracking/ism_transition/careflow_step|code": "at0002",
+    "request_for_advice/referral_tracking/ism_transition/careflow_step|value": "Referral planned",
+    "request_for_advice/referral_tracking/referred_service": "Request for advice",
+    "request_for_advice/referral_tracking/service_type": "Oncology unit",
+    "request_for_advice/referral_tracking/time": "2015-09-08T19:52:07.706+02:00"
+}
